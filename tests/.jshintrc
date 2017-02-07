@@ -22,7 +22,6 @@
     "currentURL",
     "currentPath",
     "currentRouteName",
-    "URI",
     "WebSocket"
   ],
   "node": false,

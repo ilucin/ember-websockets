@@ -58,9 +58,6 @@ module.exports = {
       }
 
       var socketIOPath = host.bowerDirectory + '/socket.io-client/dist/socket.io.js';
-      var uriPath = host.bowerDirectory + '/urijs/src/URI.min.js';
-
-      host.import(uriPath);
 
       // Only import the socket.io file if one is found
       try {

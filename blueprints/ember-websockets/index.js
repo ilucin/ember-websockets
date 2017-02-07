@@ -4,8 +4,6 @@ module.exports = {
   afterInstall: function() {
     var installContext = this;
 
-    return this.addPackageToProject('mock-socket').then(function() {
-      return installContext.addBowerPackageToProject('urijs');
-    });
+    return this.addPackageToProject('mock-socket');
   }
 };
