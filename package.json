@@ -30,8 +30,7 @@
     "ember-cli-babel": "^5.1.7",
     "exists-sync": "0.0.4",
     "mock-socket": "^6.0.1",
-    "socket.io-client": "^1.7.3",
-    "urijs": "^1.18.9"
+    "socket.io-client": "^1.7.3"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",

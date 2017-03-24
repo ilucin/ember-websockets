@@ -11,7 +11,6 @@ module.exports = {
   rules: {
   },
   globals: {
-    io: true,
-    URI: true
+    io: true
   }
 };
