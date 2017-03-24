@@ -1,15 +1,19 @@
-# EmberJS WebSockets Addon
+<p align="center"><img src="https://i.imgur.com/pFNxqZH.png" width="600"></p>
 
-This addon aims to be a simple and easy way to integrate with any websocket or socket.io
-backend. It has been designed to be minimalistic, flexible, and lightweight instead of
-forcing certain conventions on the developer.
-
-[http://www.programwitherik.com/getting-started-with-web-sockets-and-ember/](http://www.programwitherik.com/getting-started-with-web-sockets-and-ember/)
-
-[![Build Status](https://travis-ci.org/thoov/ember-websockets.svg?branch=master)](https://travis-ci.org/thoov/ember-websockets)
-[![Code Climate](https://codeclimate.com/github/thoov/ember-websockets/badges/gpa.svg)](https://codeclimate.com/github/thoov/ember-websockets)
-[![Ember Observer Score](http://emberobserver.com/badges/ember-websockets.svg)](http://emberobserver.com/addons/ember-websockets)
-[![npm version](https://badge.fury.io/js/ember-websockets.svg)](http://badge.fury.io/js/ember-websockets)
+<p align="center">
+  <a href="https://travis-ci.org/thoov/ember-websockets">
+    <img src="https://travis-ci.org/thoov/ember-websockets.svg?branch=master" alt="Build Status">
+  </a>
+  <a href="https://codeclimate.com/github/thoov/ember-websockets">
+    <img src="https://codeclimate.com/github/thoov/ember-websockets/badges/gpa.svg" alt="Code GPA">
+  </a>
+  <a href="http://emberobserver.com/addons/ember-websockets">
+    <img src="http://emberobserver.com/badges/ember-websockets.svg" alt="Ember Observer Score">
+  </a>
+  <a href="http://badge.fury.io/js/ember-websockets">
+    <img src="https://badge.fury.io/js/ember-websockets.svg" alt="NPM Version">
+  </a>
+</p>
 
 ## Installation
 ```
@@ -229,10 +233,14 @@ export default Ember.Component.extend({
 
 ## Socket.IO Support
 
-First run the socket.io generator via:
+First set socketIO to be true in your `config/environment.js` file:
 
-```shell
-ember g socket-io
+```js
+var ENV = {
+  'ember-websockets': {
+    socketIO: true
+  }
+};
 ```
 
 ```javascript
@@ -310,7 +318,7 @@ export default Ember.Component.extend({
 Example:
 
 ```javascript
-var socket = this.get('socketService').socketFor('ws://localhost:7000/', ['myOptionalProtocol']);
+const socket = this.get('socketService').socketFor('ws://localhost:7000/', ['myOptionalProtocol']);
 ```
 
 socketFor takes two arguments: **a url**, **a protocol array** (optional), and returns a socket instance from its cache or a new websocket connection if one was not found.
@@ -318,7 +326,7 @@ socketFor takes two arguments: **a url**, **a protocol array** (optional), and r
 To use a custom namespace, append the namespace to the end of the url.
 
 ```javascript
-var socket = this.get('socketService').socketFor('ws://localhost:7000/' + namespace);
+const socket = this.get('socketService').socketFor('ws://localhost:7000/' + namespace);
 ```
 
 ### On
@@ -326,7 +334,7 @@ var socket = this.get('socketService').socketFor('ws://localhost:7000/' + namesp
 Example:
 
 ```javascript
-var socket = this.get('socketService').socketFor('ws://localhost:7000/');
+const socket = this.get('socketService').socketFor('ws://localhost:7000/');
 
 socket.on('open', this.myOtherOpenFunction);
 ```
