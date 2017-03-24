@@ -1,3 +1,4 @@
 {
-  "name": "ember-websockets"
+  "name": "ember-websockets",
+  "dependencies": {}
 }
